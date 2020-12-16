@@ -23,6 +23,13 @@ module.exports = function (app) {
     });
 
     app.delete("/song/:id", function(req, res) {
-        db.Song
-    })
+        db.Song.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function (dbSong){
+            res.json(dbSong)
+        });
+    });
 }
