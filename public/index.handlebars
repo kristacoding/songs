@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <header>
+    <h1>Music/h1>
+  </header>
+
+  <section class="jumbotron jumbotron-fluid">
+    <div class="container car-form">
+      <h2 class="display-4" style="middle">Add a Song</h2>
+      <form>
+        <div class="form-group">
+          <label for="city">Artist</label>
+          <input type="city" class="form-control" id="artist" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="make">Title</label>
+          <input type="make" class="form-control" id="title">
+        </div>
+        <div class="form-group">
+          <label for="model">Genre</label>
+          <input type="model" class="form-control" id="genre">
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="year" class="form-control" id="year">
+        </div>
+        <button type="submit" class="btn btn-primary" id="song=form">Submit</button>
+      </form>
+
+    </div>
+  </section>
+
+  <section class = "container">
+    <h2>Current Songs</h2>
+    {{#each songs}}
+    <div class="row">
+        <div class="col card" style="width:18rem;">
+            <div class = "card-body">
+            <h5 class="card-title">Artist: {{artist}}</h5>
+            <h5 class="card-title">Title: {{title}}</h5>
+            <h6 class="card-subtitle mb-2">Year: {{year}}    Genre: {{genre}}</h6>
+            <p><button type="submit button" class="btn btn-primary delete" id={{this.id}}>Buy Now!</button></p>
+            </div>
+    </div>
+    {{/each}}
+</section>
+
+
+</html>
